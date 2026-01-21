@@ -807,7 +807,11 @@ export default function DocumentIntelligence() {
                     <h3 className="text-sm font-bold text-slate-800">Private Repository Engine</h3>
                   </div>
 
-                  
+                  {/* Two-line instruction added here */}
+                <div className="mb-4 text-[11px] leading-relaxed">
+                  <p className="text-slate-600">1. First Setup your cluster in MongoDB Atlas then Click <span className="font-bold text-slate-800">Clusters &rarr; Connect &rarr; Drivers</span> to copy your URI and replace <code className="text-emerald-600">&lt;password&gt;</code> with your user password.</p>
+                  <p className="text-slate-600">2. Go to <span className="font-bold text-slate-800">Network Access</span> and add <code className="bg-slate-100 px-1 rounded text-emerald-600">0.0.0.0/0</code> to allow cloud access.</p>
+                </div>
 
                   <div className="space-y-4 mb-6 rounded-lg">
                     <input type="text" placeholder="MongoDB Connection URI..." className="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-emerald-500 outline-none transition-all" value={mongoUri} onChange={(e) => setMongoUri(e.target.value)} />
